@@ -54,4 +54,7 @@
 
 - (IBAction)buttonCreateGoal:(id)sender;
 
+- (IBAction)buttonPlusTime:(id)sender;
+
+
 @end

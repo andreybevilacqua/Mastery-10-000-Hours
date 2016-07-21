@@ -251,6 +251,11 @@
     [self performSegueWithIdentifier:@"segueCreateGoal" sender:self];
 }
 
+- (IBAction)buttonPlusTime:(id)sender {
+    
+    
+}
+
 #pragma mark - Notification Messages
 
 - (void)notificationsToTheUser:(NSString *)newNotification{
