@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		080263591D08A074004E7BBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 080263581D08A074004E7BBE /* main.m */; };
+		0802635C1D08A074004E7BBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802635B1D08A074004E7BBE /* AppDelegate.m */; };
+		080263621D08A074004E7BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080263601D08A074004E7BBE /* Main.storyboard */; };
+		080263651D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 080263631D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodeld */; };
+		080263671D08A074004E7BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080263661D08A074004E7BBE /* Assets.xcassets */; };
+		0802636A1D08A074004E7BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080263681D08A074004E7BBE /* LaunchScreen.storyboard */; };
+		080263751D08A074004E7BBE /* Mastery_10_000_HoursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080263741D08A074004E7BBE /* Mastery_10_000_HoursTests.m */; };
+		081BEAA11D2C29B0007ED15F /* GoalDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA01D2C29B0007ED15F /* GoalDetailsTableViewController.m */; };
+		081BEAA41D2C2A13007ED15F /* cellGoalNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA31D2C2A13007ED15F /* cellGoalNameTableViewCell.m */; };
+		081BEAA71D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA61D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m */; };
+		0826E8551D2D808900C0C828 /* TimesDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826E8541D2D808900C0C828 /* TimesDB.m */; };
+		0826E85E1D2D9A3700C0C828 /* Times+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826E8571D2D9A3700C0C828 /* Times+CoreDataProperties.m */; };
+		0826E85F1D2D9A3700C0C828 /* Times.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826E8591D2D9A3700C0C828 /* Times.m */; };
+		0826E8601D2D9A3700C0C828 /* Goals+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826E85B1D2D9A3700C0C828 /* Goals+CoreDataProperties.m */; };
+		0826E8611D2D9A3700C0C828 /* Goals.m in Sources */ = {isa = PBXBuildFile; fileRef = 0826E85D1D2D9A3700C0C828 /* Goals.m */; };
+		082E437D1D1EB06100C502E6 /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082E437C1D1EB06100C502E6 /* CreateGoalViewController.m */; };
+		083848391D1B27590019FAB2 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 083848371D1B27590019FAB2 /* 53-house.png */; };
+		0838483A1D1B27590019FAB2 /* 53-house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 083848381D1B27590019FAB2 /* 53-house@2x.png */; };
+		0838483D1D1B276C0019FAB2 /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 0838483B1D1B276C0019FAB2 /* 259-list.png */; };
+		0838483E1D1B276C0019FAB2 /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0838483C1D1B276C0019FAB2 /* 259-list@2x.png */; };
+		0839175C1D1099010049A266 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0839175B1D1099010049A266 /* MainPageViewController.m */; };
+		083B7E9E1D21BBDC006B56D7 /* GoalsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083B7E9D1D21BBDC006B56D7 /* GoalsListTableViewController.m */; };
+		083B7EA11D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 083B7EA01D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m */; };
+		0893E0491D3ECE9500BD4489 /* PlusTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0893E0481D3ECE9500BD4489 /* PlusTimeViewController.m */; };
+		08D13D8A1D10456C007DF85F /* GoalsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D13D891D10456C007DF85F /* GoalsDB.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		080263711D08A074004E7BBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0802634C1D08A074004E7BBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 080263531D08A074004E7BBE;
+			remoteInfo = "Mastery 10,000 Hours";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		080263541D08A074004E7BBE /* Mastery 10,000 Hours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mastery 10,000 Hours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		080263581D08A074004E7BBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0802635A1D08A074004E7BBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Mastery 10,000 Hours/AppDelegate.h"; sourceTree = "<group>"; };
+		0802635B1D08A074004E7BBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Mastery 10,000 Hours/AppDelegate.m"; sourceTree = "<group>"; };
+		080263611D08A074004E7BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		080263641D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mastery_10_000_Hours.xcdatamodel; sourceTree = "<group>"; };
+		080263661D08A074004E7BBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		080263691D08A074004E7BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0802636B1D08A074004E7BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080263701D08A074004E7BBE /* Mastery 10,000 HoursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mastery 10,000 HoursTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		080263741D08A074004E7BBE /* Mastery_10_000_HoursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mastery_10_000_HoursTests.m; sourceTree = "<group>"; };
+		080263761D08A074004E7BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		081BEA9F1D2C29B0007ED15F /* GoalDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetailsTableViewController.h; sourceTree = "<group>"; };
+		081BEAA01D2C29B0007ED15F /* GoalDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailsTableViewController.m; sourceTree = "<group>"; };
+		081BEAA21D2C2A13007ED15F /* cellGoalNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cellGoalNameTableViewCell.h; path = ../cellGoalNameTableViewCell.h; sourceTree = "<group>"; };
+		081BEAA31D2C2A13007ED15F /* cellGoalNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cellGoalNameTableViewCell.m; path = ../cellGoalNameTableViewCell.m; sourceTree = "<group>"; };
+		081BEAA51D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cellGoalTimeRegisterTableViewCell.h; path = ../cellGoalTimeRegisterTableViewCell.h; sourceTree = "<group>"; };
+		081BEAA61D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cellGoalTimeRegisterTableViewCell.m; path = ../cellGoalTimeRegisterTableViewCell.m; sourceTree = "<group>"; };
+		0826E8531D2D808900C0C828 /* TimesDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimesDB.h; sourceTree = "<group>"; };
+		0826E8541D2D808900C0C828 /* TimesDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimesDB.m; sourceTree = "<group>"; };
+		0826E8561D2D9A3700C0C828 /* Times+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Times+CoreDataProperties.h"; path = "Mastery 10,000 Hours/Times+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0826E8571D2D9A3700C0C828 /* Times+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Times+CoreDataProperties.m"; path = "Mastery 10,000 Hours/Times+CoreDataProperties.m"; sourceTree = "<group>"; };
+		0826E8581D2D9A3700C0C828 /* Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Times.h; path = "Mastery 10,000 Hours/Times.h"; sourceTree = "<group>"; };
+		0826E8591D2D9A3700C0C828 /* Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Times.m; path = "Mastery 10,000 Hours/Times.m"; sourceTree = "<group>"; };
+		0826E85A1D2D9A3700C0C828 /* Goals+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Goals+CoreDataProperties.h"; path = "Mastery 10,000 Hours/Goals+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0826E85B1D2D9A3700C0C828 /* Goals+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Goals+CoreDataProperties.m"; path = "Mastery 10,000 Hours/Goals+CoreDataProperties.m"; sourceTree = "<group>"; };
+		0826E85C1D2D9A3700C0C828 /* Goals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Goals.h; path = "Mastery 10,000 Hours/Goals.h"; sourceTree = "<group>"; };
+		0826E85D1D2D9A3700C0C828 /* Goals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Goals.m; path = "Mastery 10,000 Hours/Goals.m"; sourceTree = "<group>"; };
+		082E437B1D1EB06100C502E6 /* CreateGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateGoalViewController.h; path = "Mastery 10,000 Hours/CreateGoalViewController.h"; sourceTree = "<group>"; };
+		082E437C1D1EB06100C502E6 /* CreateGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateGoalViewController.m; path = "Mastery 10,000 Hours/CreateGoalViewController.m"; sourceTree = "<group>"; };
+		083848371D1B27590019FAB2 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
+		083848381D1B27590019FAB2 /* 53-house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house@2x.png"; sourceTree = "<group>"; };
+		0838483B1D1B276C0019FAB2 /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
+		0838483C1D1B276C0019FAB2 /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
+		0839175A1D1099010049A266 /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainPageViewController.h; path = "Mastery 10,000 Hours/MainPageViewController.h"; sourceTree = "<group>"; };
+		0839175B1D1099010049A266 /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainPageViewController.m; path = "Mastery 10,000 Hours/MainPageViewController.m"; sourceTree = "<group>"; };
+		083B7E9C1D21BBDC006B56D7 /* GoalsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsListTableViewController.h; sourceTree = "<group>"; };
+		083B7E9D1D21BBDC006B56D7 /* GoalsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsListTableViewController.m; sourceTree = "<group>"; };
+		083B7E9F1D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cellGoalsProgressTableViewCell.h; path = ../cellGoalsProgressTableViewCell.h; sourceTree = "<group>"; };
+		083B7EA01D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cellGoalsProgressTableViewCell.m; path = ../cellGoalsProgressTableViewCell.m; sourceTree = "<group>"; };
+		0893E0471D3ECE9500BD4489 /* PlusTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusTimeViewController.h; sourceTree = "<group>"; };
+		0893E0481D3ECE9500BD4489 /* PlusTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusTimeViewController.m; sourceTree = "<group>"; };
+		08D13D881D10456C007DF85F /* GoalsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsDB.h; sourceTree = "<group>"; };
+		08D13D891D10456C007DF85F /* GoalsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsDB.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		080263511D08A074004E7BBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0802636D1D08A074004E7BBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0802634B1D08A074004E7BBE = {
+			isa = PBXGroup;
+			children = (
+				080263561D08A074004E7BBE /* Mastery 10,000 Hours */,
+				0802635A1D08A074004E7BBE /* AppDelegate.h */,
+				0802635B1D08A074004E7BBE /* AppDelegate.m */,
+				0802637F1D08B48D004E7BBE /* Model */,
+				080263801D08B492004E7BBE /* View */,
+				080263811D08B496004E7BBE /* Controller */,
+				082704E51D08DAC0000FE840 /* Images */,
+				080263731D08A074004E7BBE /* Mastery 10,000 HoursTests */,
+				080263551D08A074004E7BBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		080263551D08A074004E7BBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				080263541D08A074004E7BBE /* Mastery 10,000 Hours.app */,
+				080263701D08A074004E7BBE /* Mastery 10,000 HoursTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		080263561D08A074004E7BBE /* Mastery 10,000 Hours */ = {
+			isa = PBXGroup;
+			children = (
+				080263661D08A074004E7BBE /* Assets.xcassets */,
+				080263601D08A074004E7BBE /* Main.storyboard */,
+				080263681D08A074004E7BBE /* LaunchScreen.storyboard */,
+				0802636B1D08A074004E7BBE /* Info.plist */,
+				080263631D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodeld */,
+				080263571D08A074004E7BBE /* Supporting Files */,
+			);
+			path = "Mastery 10,000 Hours";
+			sourceTree = "<group>";
+		};
+		080263571D08A074004E7BBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				080263581D08A074004E7BBE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		080263731D08A074004E7BBE /* Mastery 10,000 HoursTests */ = {
+			isa = PBXGroup;
+			children = (
+				080263741D08A074004E7BBE /* Mastery_10_000_HoursTests.m */,
+				080263761D08A074004E7BBE /* Info.plist */,
+			);
+			path = "Mastery 10,000 HoursTests";
+			sourceTree = "<group>";
+		};
+		0802637F1D08B48D004E7BBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0826E8561D2D9A3700C0C828 /* Times+CoreDataProperties.h */,
+				0826E8571D2D9A3700C0C828 /* Times+CoreDataProperties.m */,
+				0826E8581D2D9A3700C0C828 /* Times.h */,
+				0826E8591D2D9A3700C0C828 /* Times.m */,
+				0826E85A1D2D9A3700C0C828 /* Goals+CoreDataProperties.h */,
+				0826E85B1D2D9A3700C0C828 /* Goals+CoreDataProperties.m */,
+				0826E85C1D2D9A3700C0C828 /* Goals.h */,
+				0826E85D1D2D9A3700C0C828 /* Goals.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		080263801D08B492004E7BBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0839175A1D1099010049A266 /* MainPageViewController.h */,
+				0839175B1D1099010049A266 /* MainPageViewController.m */,
+				082E437B1D1EB06100C502E6 /* CreateGoalViewController.h */,
+				082E437C1D1EB06100C502E6 /* CreateGoalViewController.m */,
+				0893E0471D3ECE9500BD4489 /* PlusTimeViewController.h */,
+				0893E0481D3ECE9500BD4489 /* PlusTimeViewController.m */,
+				083B7EA31D21BF62006B56D7 /* Tables */,
+				083B7EA21D21BF58006B56D7 /* Cells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		080263811D08B496004E7BBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				08D13D881D10456C007DF85F /* GoalsDB.h */,
+				08D13D891D10456C007DF85F /* GoalsDB.m */,
+				0826E8531D2D808900C0C828 /* TimesDB.h */,
+				0826E8541D2D808900C0C828 /* TimesDB.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		082704E51D08DAC0000FE840 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				083848361D1B27400019FAB2 /* Icons */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		083848361D1B27400019FAB2 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				083848371D1B27590019FAB2 /* 53-house.png */,
+				083848381D1B27590019FAB2 /* 53-house@2x.png */,
+				0838483B1D1B276C0019FAB2 /* 259-list.png */,
+				0838483C1D1B276C0019FAB2 /* 259-list@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		083B7EA21D21BF58006B56D7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				083B7E9F1D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.h */,
+				083B7EA01D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m */,
+				081BEAA21D2C2A13007ED15F /* cellGoalNameTableViewCell.h */,
+				081BEAA31D2C2A13007ED15F /* cellGoalNameTableViewCell.m */,
+				081BEAA51D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.h */,
+				081BEAA61D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m */,
+			);
+			name = Cells;
+			path = "Mastery 10,000 Hours";
+			sourceTree = "<group>";
+		};
+		083B7EA31D21BF62006B56D7 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				083B7E9C1D21BBDC006B56D7 /* GoalsListTableViewController.h */,
+				083B7E9D1D21BBDC006B56D7 /* GoalsListTableViewController.m */,
+				081BEA9F1D2C29B0007ED15F /* GoalDetailsTableViewController.h */,
+				081BEAA01D2C29B0007ED15F /* GoalDetailsTableViewController.m */,
+			);
+			name = Tables;
+			path = "Mastery 10,000 Hours";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		080263531D08A074004E7BBE /* Mastery 10,000 Hours */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 080263791D08A074004E7BBE /* Build configuration list for PBXNativeTarget "Mastery 10,000 Hours" */;
+			buildPhases = (
+				080263501D08A074004E7BBE /* Sources */,
+				080263511D08A074004E7BBE /* Frameworks */,
+				080263521D08A074004E7BBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mastery 10,000 Hours";
+			productName = "Mastery 10,000 Hours";
+			productReference = 080263541D08A074004E7BBE /* Mastery 10,000 Hours.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0802636F1D08A074004E7BBE /* Mastery 10,000 HoursTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0802637C1D08A074004E7BBE /* Build configuration list for PBXNativeTarget "Mastery 10,000 HoursTests" */;
+			buildPhases = (
+				0802636C1D08A074004E7BBE /* Sources */,
+				0802636D1D08A074004E7BBE /* Frameworks */,
+				0802636E1D08A074004E7BBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				080263721D08A074004E7BBE /* PBXTargetDependency */,
+			);
+			name = "Mastery 10,000 HoursTests";
+			productName = "Mastery 10,000 HoursTests";
+			productReference = 080263701D08A074004E7BBE /* Mastery 10,000 HoursTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0802634C1D08A074004E7BBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Andrey Bevilacqua";
+				TargetAttributes = {
+					080263531D08A074004E7BBE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0802636F1D08A074004E7BBE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 080263531D08A074004E7BBE;
+					};
+				};
+			};
+			buildConfigurationList = 0802634F1D08A074004E7BBE /* Build configuration list for PBXProject "Mastery 10,000 Hours" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0802634B1D08A074004E7BBE;
+			productRefGroup = 080263551D08A074004E7BBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				080263531D08A074004E7BBE /* Mastery 10,000 Hours */,
+				0802636F1D08A074004E7BBE /* Mastery 10,000 HoursTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		080263521D08A074004E7BBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				083848391D1B27590019FAB2 /* 53-house.png in Resources */,
+				0802636A1D08A074004E7BBE /* LaunchScreen.storyboard in Resources */,
+				0838483D1D1B276C0019FAB2 /* 259-list.png in Resources */,
+				080263671D08A074004E7BBE /* Assets.xcassets in Resources */,
+				0838483A1D1B27590019FAB2 /* 53-house@2x.png in Resources */,
+				080263621D08A074004E7BBE /* Main.storyboard in Resources */,
+				0838483E1D1B276C0019FAB2 /* 259-list@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0802636E1D08A074004E7BBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		080263501D08A074004E7BBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0826E85E1D2D9A3700C0C828 /* Times+CoreDataProperties.m in Sources */,
+				08D13D8A1D10456C007DF85F /* GoalsDB.m in Sources */,
+				0802635C1D08A074004E7BBE /* AppDelegate.m in Sources */,
+				0826E8551D2D808900C0C828 /* TimesDB.m in Sources */,
+				0839175C1D1099010049A266 /* MainPageViewController.m in Sources */,
+				083B7EA11D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m in Sources */,
+				083B7E9E1D21BBDC006B56D7 /* GoalsListTableViewController.m in Sources */,
+				080263591D08A074004E7BBE /* main.m in Sources */,
+				080263651D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodeld in Sources */,
+				0826E8611D2D9A3700C0C828 /* Goals.m in Sources */,
+				0893E0491D3ECE9500BD4489 /* PlusTimeViewController.m in Sources */,
+				082E437D1D1EB06100C502E6 /* CreateGoalViewController.m in Sources */,
+				081BEAA71D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m in Sources */,
+				0826E85F1D2D9A3700C0C828 /* Times.m in Sources */,
+				081BEAA41D2C2A13007ED15F /* cellGoalNameTableViewCell.m in Sources */,
+				0826E8601D2D9A3700C0C828 /* Goals+CoreDataProperties.m in Sources */,
+				081BEAA11D2C29B0007ED15F /* GoalDetailsTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0802636C1D08A074004E7BBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080263751D08A074004E7BBE /* Mastery_10_000_HoursTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		080263721D08A074004E7BBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 080263531D08A074004E7BBE /* Mastery 10,000 Hours */;
+			targetProxy = 080263711D08A074004E7BBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		080263601D08A074004E7BBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				080263611D08A074004E7BBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		080263681D08A074004E7BBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				080263691D08A074004E7BBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		080263771D08A074004E7BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		080263781D08A074004E7BBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0802637A1D08A074004E7BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mastery 10,000 Hours/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bevilacquas-Company.Mastery-10-000-Hours";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0802637B1D08A074004E7BBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mastery 10,000 Hours/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bevilacquas-Company.Mastery-10-000-Hours";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0802637D1D08A074004E7BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mastery 10,000 HoursTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bevilacquas-Company.Mastery-10-000-HoursTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mastery 10,000 Hours.app/Mastery 10,000 Hours";
+			};
+			name = Debug;
+		};
+		0802637E1D08A074004E7BBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mastery 10,000 HoursTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bevilacquas-Company.Mastery-10-000-HoursTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mastery 10,000 Hours.app/Mastery 10,000 Hours";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0802634F1D08A074004E7BBE /* Build configuration list for PBXProject "Mastery 10,000 Hours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080263771D08A074004E7BBE /* Debug */,
+				080263781D08A074004E7BBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		080263791D08A074004E7BBE /* Build configuration list for PBXNativeTarget "Mastery 10,000 Hours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0802637A1D08A074004E7BBE /* Debug */,
+				0802637B1D08A074004E7BBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0802637C1D08A074004E7BBE /* Build configuration list for PBXNativeTarget "Mastery 10,000 HoursTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0802637D1D08A074004E7BBE /* Debug */,
+				0802637E1D08A074004E7BBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		080263631D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				080263641D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodel */,
+			);
+			currentVersion = 080263641D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodel */;
+			path = Mastery_10_000_Hours.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0802634C1D08A074004E7BBE /* Project object */;
+}

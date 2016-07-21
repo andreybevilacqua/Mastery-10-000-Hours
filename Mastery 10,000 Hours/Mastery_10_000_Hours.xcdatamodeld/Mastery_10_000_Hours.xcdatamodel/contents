@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Goals" representedClassName="Goals" syncable="YES">
+        <attribute name="creation_Date" attributeType="Date" syncable="YES"/>
+        <attribute name="defined_Goal" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="total_Time" attributeType="Double" minValueString="0" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="times" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Times" inverseName="goals" inverseEntity="Times" syncable="YES"/>
+    </entity>
+    <entity name="Times" representedClassName="Times" syncable="YES">
+        <attribute name="insertion_Date" attributeType="Date" syncable="YES"/>
+        <attribute name="time" attributeType="Double" minValueString="0" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="goals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goals" inverseName="times" inverseEntity="Goals" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Goals" positionX="-63" positionY="-324" width="128" height="118"/>
+        <element name="Times" positionX="144" positionY="-295" width="135" height="88"/>
+    </elements>
+</model>
