@@ -14,6 +14,7 @@
 		080263671D08A074004E7BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080263661D08A074004E7BBE /* Assets.xcassets */; };
 		0802636A1D08A074004E7BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080263681D08A074004E7BBE /* LaunchScreen.storyboard */; };
 		080263751D08A074004E7BBE /* Mastery_10_000_HoursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080263741D08A074004E7BBE /* Mastery_10_000_HoursTests.m */; };
+		080A8C8A1D4532CA00C4B5AE /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 080A8C891D4532CA00C4B5AE /* KeyboardViewController.m */; };
 		081BEAA11D2C29B0007ED15F /* GoalDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA01D2C29B0007ED15F /* GoalDetailsTableViewController.m */; };
 		081BEAA41D2C2A13007ED15F /* cellGoalNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA31D2C2A13007ED15F /* cellGoalNameTableViewCell.m */; };
 		081BEAA71D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA61D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m */; };
@@ -30,7 +31,6 @@
 		0839175C1D1099010049A266 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0839175B1D1099010049A266 /* MainPageViewController.m */; };
 		083B7E9E1D21BBDC006B56D7 /* GoalsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083B7E9D1D21BBDC006B56D7 /* GoalsListTableViewController.m */; };
 		083B7EA11D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 083B7EA01D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m */; };
-		0893E0491D3ECE9500BD4489 /* PlusTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0893E0481D3ECE9500BD4489 /* PlusTimeViewController.m */; };
 		08D13D8A1D10456C007DF85F /* GoalsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D13D891D10456C007DF85F /* GoalsDB.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +57,8 @@
 		080263701D08A074004E7BBE /* Mastery 10,000 HoursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mastery 10,000 HoursTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		080263741D08A074004E7BBE /* Mastery_10_000_HoursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mastery_10_000_HoursTests.m; sourceTree = "<group>"; };
 		080263761D08A074004E7BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080A8C881D4532CA00C4B5AE /* KeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		080A8C891D4532CA00C4B5AE /* KeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
 		081BEA9F1D2C29B0007ED15F /* GoalDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetailsTableViewController.h; sourceTree = "<group>"; };
 		081BEAA01D2C29B0007ED15F /* GoalDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailsTableViewController.m; sourceTree = "<group>"; };
 		081BEAA21D2C2A13007ED15F /* cellGoalNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cellGoalNameTableViewCell.h; path = ../cellGoalNameTableViewCell.h; sourceTree = "<group>"; };
@@ -85,8 +87,6 @@
 		083B7E9D1D21BBDC006B56D7 /* GoalsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsListTableViewController.m; sourceTree = "<group>"; };
 		083B7E9F1D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cellGoalsProgressTableViewCell.h; path = ../cellGoalsProgressTableViewCell.h; sourceTree = "<group>"; };
 		083B7EA01D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cellGoalsProgressTableViewCell.m; path = ../cellGoalsProgressTableViewCell.m; sourceTree = "<group>"; };
-		0893E0471D3ECE9500BD4489 /* PlusTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusTimeViewController.h; sourceTree = "<group>"; };
-		0893E0481D3ECE9500BD4489 /* PlusTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusTimeViewController.m; sourceTree = "<group>"; };
 		08D13D881D10456C007DF85F /* GoalsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsDB.h; sourceTree = "<group>"; };
 		08D13D891D10456C007DF85F /* GoalsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsDB.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,8 +185,8 @@
 				0839175B1D1099010049A266 /* MainPageViewController.m */,
 				082E437B1D1EB06100C502E6 /* CreateGoalViewController.h */,
 				082E437C1D1EB06100C502E6 /* CreateGoalViewController.m */,
-				0893E0471D3ECE9500BD4489 /* PlusTimeViewController.h */,
-				0893E0481D3ECE9500BD4489 /* PlusTimeViewController.m */,
+				080A8C881D4532CA00C4B5AE /* KeyboardViewController.h */,
+				080A8C891D4532CA00C4B5AE /* KeyboardViewController.m */,
 				083B7EA31D21BF62006B56D7 /* Tables */,
 				083B7EA21D21BF58006B56D7 /* Cells */,
 			);
@@ -360,10 +360,10 @@
 				0839175C1D1099010049A266 /* MainPageViewController.m in Sources */,
 				083B7EA11D21BF4D006B56D7 /* cellGoalsProgressTableViewCell.m in Sources */,
 				083B7E9E1D21BBDC006B56D7 /* GoalsListTableViewController.m in Sources */,
+				080A8C8A1D4532CA00C4B5AE /* KeyboardViewController.m in Sources */,
 				080263591D08A074004E7BBE /* main.m in Sources */,
 				080263651D08A074004E7BBE /* Mastery_10_000_Hours.xcdatamodeld in Sources */,
 				0826E8611D2D9A3700C0C828 /* Goals.m in Sources */,
-				0893E0491D3ECE9500BD4489 /* PlusTimeViewController.m in Sources */,
 				082E437D1D1EB06100C502E6 /* CreateGoalViewController.m in Sources */,
 				081BEAA71D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m in Sources */,
 				0826E85F1D2D9A3700C0C828 /* Times.m in Sources */,

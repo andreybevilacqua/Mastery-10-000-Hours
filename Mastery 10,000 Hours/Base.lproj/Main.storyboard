@@ -392,10 +392,10 @@
             </objects>
             <point key="canvasLocation" x="2717" y="74"/>
         </scene>
-        <!--Plus Time View Controller-->
+        <!--Keyboard View Controller-->
         <scene sceneID="xeP-XD-7zT">
             <objects>
-                <viewController id="SGz-GO-dze" customClass="PlusTimeViewController" sceneMemberID="viewController">
+                <viewController id="SGz-GO-dze" customClass="KeyboardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5jI-Vn-mi5"/>
                         <viewControllerLayoutGuide type="bottom" id="iCh-dg-10E"/>
