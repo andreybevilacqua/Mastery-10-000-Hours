@@ -26,6 +26,7 @@
 
 /*
     O QUE FALTA:
+        - Limitar a subida dos registros de tempo, pra que eles não fiquem em cima da header cell;
         - Teclado com nros para adicionar tempo mais rápido;
         - Criar um layout melhor pro app;
         - Criar icons para o app.
@@ -45,7 +46,7 @@
     
     seconds = 0;
     minutes = 0;
-    hours = 10000;
+    hours = 0;
     totalStopWatchTimer = 0; // In Seconds!!!
     
     timerRegister = [NSNumber numberWithDouble:0];
@@ -253,7 +254,7 @@
 
 - (IBAction)buttonPlusTime:(id)sender {
     
-    
+    [self performSegueWithIdentifier:@"segueKeyboard" sender:self];
 }
 
 #pragma mark - Notification Messages

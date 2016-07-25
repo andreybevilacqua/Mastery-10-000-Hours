@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KeyboardViewController : UIViewController
+@interface KeyboardViewController : UIViewController <UITextFieldDelegate> {
+    
+    double seconds;
+    double minutes;
+    double hours;
+    double totalKeyboardTime;
+    
+    NSMutableString *secondsString;
+    NSMutableString *minutesString;
+    NSMutableString *hoursString;
+    NSString *totalKeyboardTimeString;
+}
+
+@property (strong, nonatomic) IBOutlet UITextField *textFieldTotalTime;
+
+- (IBAction)buttonSave:(id)sender;
+- (IBAction)buttonCancel:(id)sender;
+
 
 @end

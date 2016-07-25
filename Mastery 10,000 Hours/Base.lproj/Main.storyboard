@@ -172,13 +172,7 @@
                             <outlet property="delegate" destination="xG3-Ee-Fxc" id="fiN-Jm-lVH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Goal Details" id="iHZ-Hd-9jR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WyQ-gU-nik">
-                            <connections>
-                                <action selector="buttonEditTimeRegister:" destination="xG3-Ee-Fxc" id="8fU-U7-eWW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Goal Details" id="iHZ-Hd-9jR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mw-ge-uHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -283,6 +277,7 @@
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="buttonPlusTime:" destination="QsX-lP-JtT" eventType="touchUpInside" id="Ttw-Cd-vht"/>
+                                    <segue destination="SGz-GO-dze" kind="presentation" identifier="segueKeyboard" modalPresentationStyle="currentContext" modalTransitionStyle="coverVertical" id="zLX-X0-gfv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -395,86 +390,85 @@
         <!--Keyboard View Controller-->
         <scene sceneID="xeP-XD-7zT">
             <objects>
-                <viewController id="SGz-GO-dze" customClass="KeyboardViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="SGz-GO-dze" customClass="KeyboardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5jI-Vn-mi5"/>
                         <viewControllerLayoutGuide type="bottom" id="iCh-dg-10E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aSR-ZV-Wbq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MM:SS" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53c-Fk-U1k">
-                                <rect key="frame" x="0.0" y="20" width="600" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-uk-Oae">
+                                <rect key="frame" x="235" y="212" width="130" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Fy0-7T-YVe"/>
+                                    <constraint firstAttribute="height" constant="24" id="oyb-ID-dLr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oy-w2-6gs">
+                                <rect key="frame" x="210" y="330" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cmx-Jt-rU8"/>
+                                    <constraint firstAttribute="width" constant="46" id="zNh-B9-nPi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSave:" destination="SGz-GO-dze" eventType="touchUpInside" id="S63-uw-65v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gba-5w-xTD">
+                                <rect key="frame" x="338" y="330" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="F0U-Ye-oKK"/>
+                                    <constraint firstAttribute="width" constant="60" id="tfG-kz-f8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonCancel:" destination="SGz-GO-dze" eventType="touchUpInside" id="0ft-td-4To"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MM:SS" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="34L-NB-91u">
+                                <rect key="frame" x="210" y="285" width="181" height="30"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="VX3-I2-Han"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAX-kK-8Id">
-                                <rect key="frame" x="81" y="65" width="107" height="51"/>
-                                <state key="normal" title="1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0e-Sz-zoB">
-                                <rect key="frame" x="225" y="65" width="107" height="51"/>
-                                <state key="normal" title="2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJu-mE-KQL">
-                                <rect key="frame" x="385" y="65" width="107" height="51"/>
-                                <state key="normal" title="3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROf-GM-4ZB">
-                                <rect key="frame" x="81" y="124" width="107" height="51"/>
-                                <state key="normal" title="4"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYW-nV-3ar">
-                                <rect key="frame" x="225" y="124" width="107" height="51"/>
-                                <state key="normal" title="5"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7t-jd-xRW">
-                                <rect key="frame" x="385" y="124" width="107" height="51"/>
-                                <state key="normal" title="6"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH0-Qw-u8V">
-                                <rect key="frame" x="81" y="183" width="107" height="51"/>
-                                <state key="normal" title="7"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQD-WN-4fu">
-                                <rect key="frame" x="225" y="183" width="107" height="51"/>
-                                <state key="normal" title="8"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ro-l3-0gs">
-                                <rect key="frame" x="385" y="183" width="107" height="51"/>
-                                <state key="normal" title="9"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLg-xE-OCb">
-                                <rect key="frame" x="81" y="241" width="107" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="&lt;-"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofD-w6-yMi">
-                                <rect key="frame" x="225" y="241" width="107" height="51"/>
-                                <state key="normal" title="0"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZN-PC-F6r">
-                                <rect key="frame" x="385" y="241" width="107" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="+"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJQ-vP-fHy">
-                                <rect key="frame" x="20" y="20" width="46" height="30"/>
-                                <state key="normal" title="Att"/>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.641526560508768" blue="0.081324091246222543" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="53c-Fk-U1k" firstAttribute="centerX" secondItem="aSR-ZV-Wbq" secondAttribute="centerX" id="VoD-VF-S4e"/>
+                            <constraint firstItem="6oy-w2-6gs" firstAttribute="baseline" secondItem="Gba-5w-xTD" secondAttribute="baseline" id="6kx-F7-EsW"/>
+                            <constraint firstItem="34L-NB-91u" firstAttribute="centerX" secondItem="aSR-ZV-Wbq" secondAttribute="centerX" id="9Z7-y9-ZlG"/>
+                            <constraint firstItem="Gba-5w-xTD" firstAttribute="width" secondItem="6oy-w2-6gs" secondAttribute="width" constant="14" id="FlP-aQ-7Zb"/>
+                            <constraint firstItem="Gba-5w-xTD" firstAttribute="height" secondItem="6oy-w2-6gs" secondAttribute="height" id="HHn-45-XT6"/>
+                            <constraint firstAttribute="trailing" secondItem="Gba-5w-xTD" secondAttribute="trailing" constant="202" id="Ix7-ws-acX"/>
+                            <constraint firstItem="Gba-5w-xTD" firstAttribute="top" secondItem="34L-NB-91u" secondAttribute="bottom" constant="15" id="WWe-mn-j3D"/>
+                            <constraint firstItem="CO3-uk-Oae" firstAttribute="centerX" secondItem="aSR-ZV-Wbq" secondAttribute="centerX" id="bjn-9S-zmH"/>
+                            <constraint firstItem="6oy-w2-6gs" firstAttribute="leading" secondItem="aSR-ZV-Wbq" secondAttribute="leading" constant="210" id="hne-fk-IX4"/>
+                            <constraint firstItem="34L-NB-91u" firstAttribute="top" secondItem="CO3-uk-Oae" secondAttribute="bottom" constant="49" id="oHU-Xl-dqd"/>
+                            <constraint firstItem="34L-NB-91u" firstAttribute="centerY" secondItem="aSR-ZV-Wbq" secondAttribute="centerY" id="qT1-Vq-zqC"/>
                         </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="300"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="600" height="300"/>
+                    <connections>
+                        <outlet property="textFieldTotalTime" destination="34L-NB-91u" id="ZO1-O8-Pxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8r-x6-dPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="697"/>
+            <point key="canvasLocation" x="1897" y="830"/>
         </scene>
     </scenes>
     <resources>
