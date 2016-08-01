@@ -15,6 +15,8 @@
 		0802636A1D08A074004E7BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080263681D08A074004E7BBE /* LaunchScreen.storyboard */; };
 		080263751D08A074004E7BBE /* Mastery_10_000_HoursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080263741D08A074004E7BBE /* Mastery_10_000_HoursTests.m */; };
 		080A8C8A1D4532CA00C4B5AE /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 080A8C891D4532CA00C4B5AE /* KeyboardViewController.m */; };
+		080AB5CF1D4FEA3500762AF5 /* VMaskEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB5CC1D4FEA3500762AF5 /* VMaskEditor.m */; };
+		080AB5D01D4FEA3500762AF5 /* VMaskTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB5CE1D4FEA3500762AF5 /* VMaskTextField.m */; };
 		081BEAA11D2C29B0007ED15F /* GoalDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA01D2C29B0007ED15F /* GoalDetailsTableViewController.m */; };
 		081BEAA41D2C2A13007ED15F /* cellGoalNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA31D2C2A13007ED15F /* cellGoalNameTableViewCell.m */; };
 		081BEAA71D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 081BEAA61D2C2A2C007ED15F /* cellGoalTimeRegisterTableViewCell.m */; };
@@ -59,6 +61,10 @@
 		080263761D08A074004E7BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		080A8C881D4532CA00C4B5AE /* KeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
 		080A8C891D4532CA00C4B5AE /* KeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		080AB5CB1D4FEA3500762AF5 /* VMaskEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMaskEditor.h; sourceTree = "<group>"; };
+		080AB5CC1D4FEA3500762AF5 /* VMaskEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMaskEditor.m; sourceTree = "<group>"; };
+		080AB5CD1D4FEA3500762AF5 /* VMaskTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMaskTextField.h; sourceTree = "<group>"; };
+		080AB5CE1D4FEA3500762AF5 /* VMaskTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMaskTextField.m; sourceTree = "<group>"; };
 		081BEA9F1D2C29B0007ED15F /* GoalDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetailsTableViewController.h; sourceTree = "<group>"; };
 		081BEAA01D2C29B0007ED15F /* GoalDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailsTableViewController.m; sourceTree = "<group>"; };
 		081BEAA21D2C2A13007ED15F /* cellGoalNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cellGoalNameTableViewCell.h; path = ../cellGoalNameTableViewCell.h; sourceTree = "<group>"; };
@@ -118,9 +124,11 @@
 				0802637F1D08B48D004E7BBE /* Model */,
 				080263801D08B492004E7BBE /* View */,
 				080263811D08B496004E7BBE /* Controller */,
+				080AB5D11D4FEA3A00762AF5 /* VMask */,
 				082704E51D08DAC0000FE840 /* Images */,
 				080263731D08A074004E7BBE /* Mastery 10,000 HoursTests */,
 				080263551D08A074004E7BBE /* Products */,
+				14FA688D1C97A07DD799610A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +212,17 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		080AB5D11D4FEA3A00762AF5 /* VMask */ = {
+			isa = PBXGroup;
+			children = (
+				080AB5CB1D4FEA3500762AF5 /* VMaskEditor.h */,
+				080AB5CC1D4FEA3500762AF5 /* VMaskEditor.m */,
+				080AB5CD1D4FEA3500762AF5 /* VMaskTextField.h */,
+				080AB5CE1D4FEA3500762AF5 /* VMaskTextField.m */,
+			);
+			name = VMask;
+			sourceTree = "<group>";
+		};
 		082704E51D08DAC0000FE840 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +266,13 @@
 			);
 			name = Tables;
 			path = "Mastery 10,000 Hours";
+			sourceTree = "<group>";
+		};
+		14FA688D1C97A07DD799610A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +396,8 @@
 				081BEAA41D2C2A13007ED15F /* cellGoalNameTableViewCell.m in Sources */,
 				0826E8601D2D9A3700C0C828 /* Goals+CoreDataProperties.m in Sources */,
 				081BEAA11D2C29B0007ED15F /* GoalDetailsTableViewController.m in Sources */,
+				080AB5CF1D4FEA3500762AF5 /* VMaskEditor.m in Sources */,
+				080AB5D01D4FEA3500762AF5 /* VMaskTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

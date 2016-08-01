@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="flf-Qd-aCN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="flf-Qd-aCN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -437,7 +437,7 @@
                                     <action selector="buttonCancel:" destination="SGz-GO-dze" eventType="touchUpInside" id="0ft-td-4To"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MM:SS" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="34L-NB-91u">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MM:SS" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="34L-NB-91u" customClass="VMaskTextField">
                                 <rect key="frame" x="210" y="285" width="181" height="30"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -446,23 +446,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max: 99:59:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJY-aZ-TW9">
+                                <rect key="frame" x="222" y="249" width="157" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="Qgc-C4-CLd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.641526560508768" blue="0.081324091246222543" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6oy-w2-6gs" firstAttribute="baseline" secondItem="Gba-5w-xTD" secondAttribute="baseline" id="6kx-F7-EsW"/>
                             <constraint firstItem="34L-NB-91u" firstAttribute="centerX" secondItem="aSR-ZV-Wbq" secondAttribute="centerX" id="9Z7-y9-ZlG"/>
+                            <constraint firstItem="WJY-aZ-TW9" firstAttribute="top" secondItem="CO3-uk-Oae" secondAttribute="bottom" constant="13" id="A2f-rj-Z7q"/>
                             <constraint firstItem="Gba-5w-xTD" firstAttribute="width" secondItem="6oy-w2-6gs" secondAttribute="width" constant="14" id="FlP-aQ-7Zb"/>
                             <constraint firstItem="Gba-5w-xTD" firstAttribute="height" secondItem="6oy-w2-6gs" secondAttribute="height" id="HHn-45-XT6"/>
                             <constraint firstAttribute="trailing" secondItem="Gba-5w-xTD" secondAttribute="trailing" constant="202" id="Ix7-ws-acX"/>
                             <constraint firstItem="Gba-5w-xTD" firstAttribute="top" secondItem="34L-NB-91u" secondAttribute="bottom" constant="15" id="WWe-mn-j3D"/>
                             <constraint firstItem="CO3-uk-Oae" firstAttribute="centerX" secondItem="aSR-ZV-Wbq" secondAttribute="centerX" id="bjn-9S-zmH"/>
                             <constraint firstItem="6oy-w2-6gs" firstAttribute="leading" secondItem="aSR-ZV-Wbq" secondAttribute="leading" constant="210" id="hne-fk-IX4"/>
+                            <constraint firstItem="WJY-aZ-TW9" firstAttribute="centerX" secondItem="aSR-ZV-Wbq" secondAttribute="centerX" id="m4u-Lm-aQ8"/>
                             <constraint firstItem="34L-NB-91u" firstAttribute="top" secondItem="CO3-uk-Oae" secondAttribute="bottom" constant="49" id="oHU-Xl-dqd"/>
                             <constraint firstItem="34L-NB-91u" firstAttribute="centerY" secondItem="aSR-ZV-Wbq" secondAttribute="centerY" id="qT1-Vq-zqC"/>
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="300"/>
                     <connections>
+                        <outlet property="maskTextField" destination="34L-NB-91u" id="FtJ-iT-OQe"/>
                         <outlet property="textFieldTotalTime" destination="34L-NB-91u" id="ZO1-O8-Pxc"/>
                     </connections>
                 </viewController>

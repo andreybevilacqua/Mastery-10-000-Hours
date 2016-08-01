@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VMaskTextField.h"
 
 @interface KeyboardViewController : UIViewController <UITextFieldDelegate> {
     
@@ -22,9 +23,9 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *textFieldTotalTime;
+@property (weak, nonatomic) IBOutlet VMaskTextField* maskTextField;
 
 - (IBAction)buttonSave:(id)sender;
 - (IBAction)buttonCancel:(id)sender;
-
 
 @end
