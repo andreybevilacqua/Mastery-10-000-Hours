@@ -27,16 +27,8 @@
 /*
     O QUE FALTA:
         - Limitar a subida dos registros de tempo, pra que eles não fiquem em cima da header cell;
-        - Teclado com nros para adicionar tempo mais rápido;
-        - Criar um layout melhor pro app;
         - Criar icons para o app.
  */
-
-
-
-
-
-
 
 #pragma mark - Beginning
 
@@ -53,6 +45,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotification_CreateGoalVC:) name:@"goalSaved" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotification_GoalsListTbVC:) name:@"zeroGoals" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotification_KeyboardVC:) name:@"keyboardAddTime" object:nil];
     
     goalsDB = [GoalsDB new];
     timesDB = [TimesDB new];
@@ -86,6 +79,15 @@
         
         labelSelectedGoal.text = @"No goal created yet";
         
+    }
+}
+
+// Received Notification from KeyboardViewController
+- (void)receivedNotification_KeyboardVC:(NSNotification *)note {
+    
+    if([[note name] isEqualToString:@"keyboardAddTime"]){
+        
+        [self notificationsToTheUser:@"Great!!! Keep going!"];
     }
 }
 
@@ -139,9 +141,6 @@
         
         [NSTimer cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopWatch) object:nil];
         
-        //[timesDB deleteAllObjects];
-        //[goalsDB updateTotalTimeToZero:labelSelectedGoal.text];
-        
         if([timesDB saveNewTime:timerRegister]){
             
             [buttonStartTime setTitle:@"Start!" forState:UIControlStateNormal];
@@ -171,6 +170,7 @@
     
     [labelStopwatch setText:@"00:00:00"];
     [buttonStartTime setTitle:@"Start!" forState:UIControlStateNormal];
+    [labelInstruction setText:@"You can close the app"];
     
 }
 

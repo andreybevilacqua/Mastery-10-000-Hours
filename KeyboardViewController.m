@@ -8,6 +8,7 @@
 
 #import "KeyboardViewController.h"
 #import "VMaskTextField.h"
+#import "TimesDB.h"
 
 @interface KeyboardViewController ()
 
@@ -26,6 +27,7 @@
     minutes = 0;
     hours = 0;
     totalKeyboardTime = 0;
+    totalKeyboardTime_NSNumber = [NSNumber numberWithDouble:0];
     
     secondsString = [NSMutableString stringWithFormat:@""];
     minutesString = [NSMutableString stringWithFormat:@""];
@@ -36,6 +38,8 @@
     maskTextField.delegate = self;
     
     textFieldTotalTime.keyboardType = UIKeyboardTypeNumberPad;
+    
+    timesDB = [TimesDB new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,54 +61,61 @@
 
 - (IBAction)buttonSave:(id)sender {
     
-    // CONTINUAR DAQUI!!!
-    // 1 - Quebrar a string, separando horas, minutos e segundos. Add esses valores nas variaveis;
-    // 2 - Valida se: segundos > 59 ? Notification User, blz; Minutos > 59 ? Notification User, blz.
-    // 3 - Se passou em tudo, executa o bloco de código abaixo e salva no banco. 
+    if([self validateTimeRegister]){
+        
+        // Increasing total time;
+        totalKeyboardTime = 0; // This is necessary so that the routine does not add 2x the same time;
+        totalKeyboardTime = totalKeyboardTime + seconds;
+        totalKeyboardTime = totalKeyboardTime + (60 * minutes);
+        totalKeyboardTime = totalKeyboardTime + ((60 * 60) * hours);
+        
+        totalKeyboardTime_NSNumber = [NSNumber numberWithDouble:totalKeyboardTime];
+        
+        if([timesDB saveNewTime:totalKeyboardTime_NSNumber]){
+            [self dismissViewControllerAnimated:YES completion:^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"keyboardAddTime" object:nil userInfo:nil];
+                
+            }];
+        } else{
+            [self notificationsToTheUser:@"Error!"];
+        }
+    }
+}
+
+#pragma mark - Input validation
+
+// Doesnt matter what is the cause of the 'NO return', it always gonna blank the text field and wait for a valid information.
+- (BOOL)validateTimeRegister{
     
-    int seconds = 0;
-    int minutes = 0;
-    int hours = 0;
-    double doubleTotalTime = 0;
+    if(maskTextField.text.length < 8){
+        
+        [self notificationsToTheUser:@"Please complete all field."];
+        return NO;
+    } else{
+        
+        BOOL alreadyNotified = NO;
+        
+        seconds = [[maskTextField.text substringWithRange:NSMakeRange(6, 2)] intValue];
+        minutes = [[maskTextField.text substringWithRange:NSMakeRange(3, 2)] intValue];
+        hours = [[maskTextField.text substringWithRange:NSMakeRange(0, 2)] intValue];
+        
+        if(seconds > 59){
+            
+            [self notificationsToTheUser:@"Seconds must be between 00 and 59"];
+            alreadyNotified = YES;
+            
+        } else if(minutes > 59 && !alreadyNotified){
+            
+            [self notificationsToTheUser:@"Minutes must be between 00 and 59"];
+            alreadyNotified = YES;
+        }
+        
+        if(alreadyNotified){
+            return NO;
+        }
+    }
     
-    [self validateTimeRegister:maskTextField.text];
-    
-    /*
-     NSString *totalTimeString = [NSString stringWithFormat:@"00:00:00"];
-     
-     int seconds = 0;
-     int minutes = 0;
-     int hours = 0;
-     double doubleTotalTime = [totalTime doubleValue];
-     
-     NSString *secondsString = @"";
-     NSString *minutesString = @"";
-     NSString *hoursString = @"";
-     
-     seconds = (fmod(doubleTotalTime, 60));
-     doubleTotalTime /= 60;
-     minutes = (fmod(doubleTotalTime, 60));
-     doubleTotalTime /= 60;
-     hours = ((int)doubleTotalTime);
-     
-     
-     
-     
-     if([timesDB saveNewTime:timerRegister]){
-     
-     [buttonStartTime setTitle:@"Start!" forState:UIControlStateNormal];
-     
-     [self notificationsToTheUser:@"GREAT!!! Keep going!"];
-     [self buttonReset:self];
-     
-     } else {
-     
-     [self notificationsToTheUser:@"Error!"];
-     }
-     
-     
-     
-     */
+    return YES;
 }
 
 - (IBAction)buttonCancel:(id)sender {
@@ -117,23 +128,6 @@
     }];
 }
 
-// Doesnt matter what is the cause of the 'NO return', it always gonna blank the text field and wait for a valid information.
-- (BOOL)validateTimeRegister:(NSNumber *)timeRegister{
-    
-    /*NSRange match = [newGoalName rangeOfString:@"["];
-    NSRange match2 = [newGoalName rangeOfString:@"("];
-    
-    if(match.location == NSNotFound && match2.location == NSNotFound){
-        
-        return YES;
-    } else{
-        
-        return NO;
-    }*/
-    
-    return YES;
-}
-
 #pragma mark - Notification Messages
 
 - (void)notificationsToTheUser:(NSString *)newNotification{
@@ -142,7 +136,6 @@
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
-    
 }
 
 @end

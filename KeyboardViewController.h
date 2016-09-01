@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VMaskTextField.h"
+#import "TimesDB.h"
 
 @interface KeyboardViewController : UIViewController <UITextFieldDelegate> {
     
@@ -20,6 +21,10 @@
     NSMutableString *minutesString;
     NSMutableString *hoursString;
     NSString *totalKeyboardTimeString;
+    
+    NSNumber *totalKeyboardTime_NSNumber;
+    
+    TimesDB *timesDB;
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *textFieldTotalTime;
@@ -27,5 +32,8 @@
 
 - (IBAction)buttonSave:(id)sender;
 - (IBAction)buttonCancel:(id)sender;
+
+- (BOOL)validateTimeRegister;
+- (void)notificationsToTheUser:(NSString *)newNotification;
 
 @end

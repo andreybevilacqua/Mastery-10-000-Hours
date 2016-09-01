@@ -54,7 +54,6 @@
 - (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
-    
 }
 
 #pragma mark - Table cells
@@ -72,8 +71,11 @@
     
     [cell.labelTimeRegister_CreationDate setText:[NSString stringWithFormat:@"%@ -> %@", insertionDateString, timeString]];
     
-    return cell;
+//    UIView *sectionView = [self.tableView headerViewForSection:indexPath.section];
+//    [self.tableView moveRowAtIndexPath:indexPath toIndexPath:indexPath];
+//    [self.tableView bringSubviewToFront:sectionView];
     
+    return cell;
 }
 
 // Corrigir primeira celula para ela nao ser puxada junto!!!
