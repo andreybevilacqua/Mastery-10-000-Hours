@@ -28,7 +28,13 @@
 - (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
+}
+
+// Every time you touch in the screen, keyboard is dismissed.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
 }
 
 #pragma mark - Action Buttons 
