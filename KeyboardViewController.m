@@ -9,6 +9,7 @@
 #import "KeyboardViewController.h"
 #import "VMaskTextField.h"
 #import "TimesDB.h"
+#import "GoalsDB.h"
 
 @interface KeyboardViewController ()
 
@@ -40,6 +41,7 @@
     textFieldTotalTime.keyboardType = UIKeyboardTypeNumberPad;
     
     timesDB = [TimesDB new];
+    goalsDB = [GoalsDB new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +85,14 @@
 }
 
 #pragma mark - Input validation
+
+- (BOOL)validateIfThereIsAnyMainGoal{
+    
+    //if(){
+        
+    //}
+    return YES;
+}
 
 // Doesnt matter what is the cause of the 'NO return', it always gonna blank the text field and wait for a valid information.
 - (BOOL)validateTimeRegister{

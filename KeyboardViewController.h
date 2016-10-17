@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "VMaskTextField.h"
 #import "TimesDB.h"
+#import "GoalsDB.h"
 
 @interface KeyboardViewController : UIViewController <UITextFieldDelegate> {
     
@@ -25,6 +26,7 @@
     NSNumber *totalKeyboardTime_NSNumber;
     
     TimesDB *timesDB;
+    GoalsDB *goalsDB;
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *textFieldTotalTime;
@@ -33,6 +35,7 @@
 - (IBAction)buttonSave:(id)sender;
 - (IBAction)buttonCancel:(id)sender;
 
+- (BOOL)validateIfThereIsAnyMainGoal;
 - (BOOL)validateTimeRegister;
 - (void)notificationsToTheUser:(NSString *)newNotification;
 
