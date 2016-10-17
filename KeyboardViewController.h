@@ -31,6 +31,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *textFieldTotalTime;
 @property (weak, nonatomic) IBOutlet VMaskTextField* maskTextField;
+@property(nonatomic, strong) NSMutableArray *arrayGoals;
 
 - (IBAction)buttonSave:(id)sender;
 - (IBAction)buttonCancel:(id)sender;

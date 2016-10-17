@@ -19,6 +19,7 @@
 
 @synthesize textFieldTotalTime;
 @synthesize maskTextField;
+@synthesize arrayGoals;
 
 - (void)viewDidLoad {
     
@@ -34,6 +35,8 @@
     minutesString = [NSMutableString stringWithFormat:@""];
     hoursString = [NSMutableString stringWithFormat:@""];
     totalKeyboardTimeString = @"";
+    
+    arrayGoals = [[NSMutableArray alloc] init];
     
     maskTextField.mask = @"##:##:##";
     maskTextField.delegate = self;
@@ -63,34 +66,43 @@
 
 - (IBAction)buttonSave:(id)sender {
     
-    if([self validateTimeRegister]){
+    if([self validateIfThereIsAnyMainGoal]){
         
-        // Increasing total time;
-        totalKeyboardTime = 0; // This is necessary so that the routine does not add 2x the same time;
-        totalKeyboardTime = totalKeyboardTime + seconds;
-        totalKeyboardTime = totalKeyboardTime + (60 * minutes);
-        totalKeyboardTime = totalKeyboardTime + ((60 * 60) * hours);
-        
-        totalKeyboardTime_NSNumber = [NSNumber numberWithDouble:totalKeyboardTime];
-        
-        if([timesDB saveNewTime:totalKeyboardTime_NSNumber]){
-            [self dismissViewControllerAnimated:YES completion:^{
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"keyboardAddTime" object:nil userInfo:nil];
-                
-            }];
-        } else{
-            [self notificationsToTheUser:@"Error!"];
+        if([self validateTimeRegister]){
+            
+            // Increasing total time;
+            totalKeyboardTime = 0; // This is necessary so that the routine does not add 2x the same time;
+            totalKeyboardTime = totalKeyboardTime + seconds;
+            totalKeyboardTime = totalKeyboardTime + (60 * minutes);
+            totalKeyboardTime = totalKeyboardTime + ((60 * 60) * hours);
+            
+            totalKeyboardTime_NSNumber = [NSNumber numberWithDouble:totalKeyboardTime];
+            
+            if([timesDB saveNewTime:totalKeyboardTime_NSNumber]){
+                [self dismissViewControllerAnimated:YES completion:^{
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"keyboardAddTime" object:nil userInfo:nil];
+                    
+                }];
+            } else{
+                [self notificationsToTheUser:@"Error!"];
+            }
         }
+    } else {
+        [self notificationsToTheUser:@"First of all, create a goal"];
     }
+    
 }
 
 #pragma mark - Input validation
 
 - (BOOL)validateIfThereIsAnyMainGoal{
     
-    //if(){
-        
-    //}
+    arrayGoals = [goalsDB loadAndReturnCoreData];
+    
+    if([arrayGoals count] == 0){
+        return NO;
+    }
+    
     return YES;
 }
 

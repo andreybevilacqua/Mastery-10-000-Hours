@@ -25,7 +25,6 @@
 
 /*
     O QUE FALTA:
-        - Validar se: keyboardView quando o user adicionar valor, se existe alguma main goal definida. Se nao, nao deixar salvar nada.
         - Limitar a subida dos registros de tempo, pra que eles não fiquem em cima da header cell;
         - Criar icons para o app.
         - Quando criar uma meta, o teclado deve começar com a primeira letra maiúscula.
