@@ -5,7 +5,6 @@
 //  Created by Andrey Bevilacqua on 6/14/16.
 //  Copyright © 2016 Andrey Bevilacqua. All rights reserved.
 //
-// [goalsDB deleteAllObjects:@"Goals"];
 
 #import "MainPageViewController.h"
 #import "AppDelegate.h"
@@ -26,8 +25,10 @@
 
 /*
     O QUE FALTA:
+        - Validar se: keyboardView quando o user adicionar valor, se existe alguma main goal definida. Se nao, nao deixar salvar nada.
         - Limitar a subida dos registros de tempo, pra que eles não fiquem em cima da header cell;
         - Criar icons para o app.
+        - Quando criar uma meta, o teclado deve começar com a primeira letra maiúscula.
  */
 
 #pragma mark - Beginning
@@ -66,9 +67,7 @@
 - (void)receivedNotification_CreateGoalVC:(NSNotification *)note {
     
     if([[note name] isEqualToString:@"goalSaved"]){
-        
         labelSelectedGoal.text = [self setLabelSelectedGoalText];
-        
     }
 }
 
@@ -99,7 +98,14 @@
     
     if ([retorno isEqualToString:@""]){
         
-        retorno = @"No goal created yet";
+        NSMutableArray *goalsList = [NSMutableArray new];
+        goalsList = [goalsDB loadAndReturnCoreData];
+        
+        if([goalsList count] == 0){
+            retorno = @"No goal created yet";
+        } else {
+            retorno = [[goalsList lastObject] name];
+        }
     }
     
     return retorno;
@@ -137,6 +143,8 @@
 
 - (IBAction)buttonSaveTime:(id)sender {
     
+    
+    
     if([timerRegister doubleValue] != 0){
         
         [NSTimer cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopWatch) object:nil];
@@ -147,6 +155,7 @@
             
             [self notificationsToTheUser:@"GREAT!!! Keep going!"];
             [self buttonReset:self];
+            [labelInstruction setText:@"Tap start button"];
             
         } else {
             
@@ -170,7 +179,7 @@
     
     [labelStopwatch setText:@"00:00:00"];
     [buttonStartTime setTitle:@"Start!" forState:UIControlStateNormal];
-    [labelInstruction setText:@"You can close the app"];
+    [labelInstruction setText:@"Tap start button"];
     
 }
 
