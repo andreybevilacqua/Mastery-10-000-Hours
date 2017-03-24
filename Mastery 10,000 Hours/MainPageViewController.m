@@ -23,13 +23,6 @@
 @synthesize labelInstruction;
 @synthesize goalName;
 
-/*
-    O QUE FALTA:
-        - Limitar a subida dos registros de tempo, pra que eles não fiquem em cima da header cell;
-        - Criar icons para o app.
-        - Quando criar uma meta, o teclado deve começar com a primeira letra maiúscula.
- */
-
 #pragma mark - Beginning
 
 - (void)viewDidLoad {
